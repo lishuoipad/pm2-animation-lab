@@ -3,6 +3,12 @@
 An independent command-line toolkit for source-driven reconstruction of
 Princess Maker 2 course/job animations and ordered native-frame verification.
 
+Version 0.2 adds free-time illustrations, the 32 age/season/destination vacation
+selectors, and an eastern adventure map adapter. `capture` runs an explicitly
+supplied DOSBox Pure core without a visible frontend, restores an anchor and
+replays bounded emulated mouse inputs. It saves native PNG/JSON only; `pipeline`
+remains the sole animation publication/playback entry. See [scene types](docs/scene-types.md).
+
 It supports 25 fixed scene profiles, continuous daily state, explicit random
 inputs, LBX/PT1 decoding, native RGB/PTS comparison, and verified playback.
 The source interpreter, compositor, publication gate and playback gate are
@@ -41,6 +47,14 @@ source-compatible conditions, not recovery of the actual RNG, all possible
 game states, or an independent hardware timing prediction. Native PTS are
 retained exactly; GIF/MP4 viewing copies round cumulative boundaries within
 5ms. MP4 pixels are lossy and are not used as the equality oracle.
+
+The new local representative intervals cover 321 native frames (115 free-time,
+149 vacation, 57 eastern-map movement). Their equality is conditioned on explicit
+RGB palettes, observed state boundaries, and one source-ordered SVGA scanout fit.
+This is not coverage of every vacation image or every adventure branch. The
+headless input sequence also reproduced all 3,097 native frames on replay under
+the same local core/options/anchor. Cross-platform CI uses synthetic inputs and
+does not certify native emulator behavior on other systems.
 
 ## Test
 

@@ -1,12 +1,14 @@
 # PM2 Animation Lab
 
-独立的 Princess Maker 2 课程与打工动画研究工具。依据固定版本源码和明确条件重放活动，合成原生图像，并与实录逐帧比较画面、顺序及时间。
+独立的 Princess Maker 2 动画与场景研究工具。依据固定版本源码和明确条件重放活动，合成原生图像，并与实录逐帧比较画面、顺序及时间。
 
 [English](README.en.md) · [完整工作流程](docs/workflow.md) · [验证范围](docs/validation.md)
 
 ## 能做什么
 
 - 支持10门课程、15项打工的源码档案；一次初始化、完整日程、随机输入和跨日状态连续执行。
+- 新增自由行动插画、32种旅行插画选择和东部森林地图步行结构；范围与限制见[场景扩展](docs/scene-types.md)。安静休养、疗养院没有独立插画调用，不伪造人物循环。
+- 可在后台运行自备DOSBox Pure核心，恢复存档并重放鼠标输入，保存原生PNG和逐帧记录；无需打开RetroArch窗口。
 - 解码外部LBX/PT1，保留mask、图层顺序、作者坐标和前景遮挡。
 - 发布合成、实录、并排差异GIF/MP4，核验原生像素、帧顺序、累计时间及输出文件哈希。
 - 播放前重新核验本次请求、完整源码状态、图像和回执；旧片不能只凭文件名被当成新结果。
@@ -77,6 +79,8 @@ pm2-animation-lab pipeline --request /absolute/pm2-data/requests/activity.json -
 把示例绝对路径替换为自己的路径；Windows参数可使用`D:/...`。发布拒绝覆盖现有目录。播放复核成功后，只打开返回JSON的`media`路径。
 
 首次准备需要独立录像索引、冻结区间和条件，不能仅给一个场景名就承诺生成已核验动画。[工作流程](docs/workflow.md)解释每份输入及其先后关系。`examples/`提供不包含原作数据的结构模板。
+
+后台取帧使用`pm2-animation-lab capture --request <请求.json> --output <新目录> --quarantine-root <外部数据根>`。它只保存实际运行的PNG/JSON；之后仍用`pipeline`发布合成与对照媒体。详见[后台取帧与新场景请求](docs/scene-types.md)。
 
 ## 验证结论
 

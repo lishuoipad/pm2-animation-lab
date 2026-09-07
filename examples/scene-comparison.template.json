@@ -1,0 +1,9 @@
+{
+  "schema": "pm2_scene_comparison_request/v1",
+  "scene": "FREE",
+  "conditions": {"mode": "free"},
+  "archive": {"path": "/external/game.zip", "sha256": "REPLACE_SHA256"},
+  "palette": {"path": "/external/palette.json", "sha256": "REPLACE_SHA256"},
+  "observation": {"path": "/external/scene-observation.json", "sha256": "REPLACE_SHA256"},
+  "encoder": {"path": "/external/ffmpeg", "sha256": "REPLACE_SHA256"}
+}

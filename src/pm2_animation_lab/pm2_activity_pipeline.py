@@ -148,6 +148,9 @@ def publish(request_path, output, quarantine, source_root):
     if output.exists():
         raise DeliveryError("output_already_exists")
     request=json.loads(request_path.read_text(encoding="utf-8"))
+    if request.get('schema') == 'pm2_scene_comparison_request/v1':
+        from pm2_animation_lab.pm2_scene_comparison import publish as publish_scene
+        return publish_scene(request_path, output, root, source_root)
     if request.get("schema") == "pm2_activity_comparison_request/v1":
         # A review is still produced through this entry and shared compiler,
         # compositor and clock. Its receipt verifies the comparison, never
@@ -226,6 +229,14 @@ def publish(request_path, output, quarantine, source_root):
 
 
 def playback(request_path, directory, quarantine, source_root, *, allow_differences=False):
+    root = Path(quarantine).resolve()
+    request_path = confined(request_path, root)
+    if not is_data_directory(root) or not Path(source_root).is_dir():
+        raise DeliveryError('existing_data_and_source_directories_required')
+    request = json.loads(request_path.read_text(encoding='utf-8'))
+    if request.get('schema') == 'pm2_scene_comparison_request/v1':
+        from pm2_animation_lab.pm2_scene_comparison import playback as playback_scene
+        return playback_scene(request_path, directory, root, Path(source_root).resolve(), allow_differences=allow_differences)
     from pm2_animation_lab.pm2_activity_playback import prepare_playback
     return prepare_playback(request_path, directory, quarantine, source_root,
                             allow_differences=allow_differences,

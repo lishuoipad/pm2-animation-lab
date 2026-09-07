@@ -1,0 +1,11 @@
+{
+  "schema": "pm2_native_capture_request/v1",
+  "core": {"path": "/external/core/shared-library", "sha256": "REPLACE_SHA256"},
+  "content": {"path": "/external/game.m3u", "sha256": "REPLACE_SHA256"},
+  "content_files": [{"path": "/external/game.zip", "sha256": "REPLACE_SHA256"}],
+  "anchor": {"path": "/external/anchor.state", "sha256": "REPLACE_SHA256"},
+  "options": {"path": "/external/core-options.cfg", "sha256": "REPLACE_SHA256"},
+  "boot_frames": 60,
+  "settle_frames": 120,
+  "actions": [{"op": "record", "frames": 1}]
+}

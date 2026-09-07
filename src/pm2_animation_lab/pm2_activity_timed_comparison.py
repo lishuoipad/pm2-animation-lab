@@ -181,6 +181,14 @@ def video_preview(directory, name, encoder):
         'timing_precision':'GIF cumulative rounding, at most 5ms from native boundaries', 'audio':False}
 
 
+def encode_timed_media(directory, media, durations, encoder):
+    """Shared GIF/MP4 encoding for activity and scene pipeline adapters."""
+    for name, frames in media.items():
+        frames[0].save(directory / (name+'.gif'), save_all=True, append_images=frames[1:],
+                       duration=durations, loop=0, optimize=False, disposal=1)
+    return {name: video_preview(directory, name, encoder) for name in media}
+
+
 def check_comparison(directory, root):
     """Re-read bound source/native PNGs, durations and exported GIF bytes."""
     directory = confined(directory, root)
@@ -371,10 +379,7 @@ def publish_comparison(request_path, output, root, source_root, compile_sequence
                 media[name].append(im)
                 row[name + '_rgb_sha256'] = hashlib.sha256(im.tobytes()).hexdigest()
             rows.append(row)
-        for name, frames in media.items():
-            frames[0].save(staging / (name+'.gif'), save_all=True, append_images=frames[1:],
-                           duration=durations, loop=0, optimize=False, disposal=1)
-        video_checks = {name:video_preview(staging,name,request['encoder']) for name in media}
+        video_checks = encode_timed_media(staging, media, durations, request['encoder'])
         write(staging / 'video_check.json', video_checks)
         # Representative differences are chosen after the complete comparison;
         # they never alter its independently frozen range or source order.
