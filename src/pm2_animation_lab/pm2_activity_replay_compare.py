@@ -81,6 +81,7 @@ def verify_run(path, report, index, root):
     require(report['exit_code'] == 0 and report['timed_out'] is False and
             not report['errors'] and not report['mutated_inputs'], 'failed_runtime')
     require(report['native_commands'] == [], 'not_read_only_playback')
+    path = Path(path).resolve()
     command_path, command = bound_json(path.parent/report['command']['path'],
                                        report['command']['sha256'], root)
     require(command_path == path.parent/'command.json', 'command_location')

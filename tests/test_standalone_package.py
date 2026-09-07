@@ -52,6 +52,31 @@ class InstalledPackageTests(unittest.TestCase):
 
 
 class PortableIsolationTests(unittest.TestCase):
+    def test_video_root_alias_is_normalized_without_allowing_escape(self):
+        from pm2_animation_lab.pm2_activity_video_index import confined as video_confined, VideoIndexError
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory).resolve();child=root/'child';child.mkdir()
+            alias=child/'..'
+            self.assertEqual(video_confined(root/'input.json',alias),root/'input.json')
+            with self.assertRaisesRegex(VideoIndexError,'outside_quarantine'):
+                video_confined(root.parent/'outside.json',alias)
+
+    def test_recording_root_alias_keeps_state_and_no_overwrite_guards(self):
+        from pm2_animation_lab.pm2_activity_replay_probe_run import recording_target
+        from pm2_animation_lab.pm2_activity_replay_audit import ReplayError
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory).resolve();child=root/'child';child.mkdir();alias=child/'..'
+            config='\n'.join(f'{k} = "{v}"' for k,v in {
+                'savestate_directory':str(root),'replay_slot':'0','replay_auto_index':'false',
+                'quit_press_twice':'false','confirm_quit':'false'}.items())
+            target=recording_target(config,alias/'input.m3u',alias/'input.state',alias)
+            self.assertEqual(target,root/'input.replay0')
+            target.write_bytes(b'synthetic existing evidence')
+            with self.assertRaisesRegex(ReplayError,'overwrite_existing'):
+                recording_target(config,alias/'input.m3u',alias/'input.state',alias)
+            with self.assertRaisesRegex(ReplayError,'outside_isolation'):
+                recording_target(config,alias/'input.m3u',alias/'input.state',child)
+
     def test_installed_command_rejects_data_inside_another_tool_checkout(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'pyproject.toml').write_text('[project]\nname="pm2-animation-lab"\n')

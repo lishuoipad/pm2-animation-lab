@@ -68,17 +68,17 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_binding_tamper_rejected(self):
         with tempfile.TemporaryDirectory() as d:
-            p = Path(d)/'synthetic'
+            p = Path(d).resolve()/'synthetic'
             p.write_bytes(b'original synthetic test')
             sha = file_hash(p)
-            self.assertEqual(binding(p, sha, Path(d)), p)
+            self.assertEqual(binding(p, sha, Path(d).resolve()), p)
             p.write_bytes(b'changed')
             with self.assertRaisesRegex(ReplayError, 'hash_mismatch'):
-                binding(p, sha, Path(d))
+                binding(p, sha, Path(d).resolve())
 
     def test_distinct_receipts_not_two_paths_to_one_run(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             paths = [root/'a', root/'b']
             videos = [root/'va', root/'vb']
             for p in paths + videos:
@@ -157,7 +157,7 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_record_target_no_overwrite_and_state_binding(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             config = '\n'.join(f'{k} = "{v}"' for k, v in {
                 'savestate_directory': str(root), 'replay_slot': '0', 'replay_auto_index': 'false',
                 'quit_press_twice': 'false', 'confirm_quit': 'false'}.items())
@@ -171,7 +171,7 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_confirm_quit_cannot_silently_block_cleanup(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             config = '\n'.join(f'{k} = "{v}"' for k, v in {
                 'savestate_directory': str(root), 'replay_slot': '0', 'replay_auto_index': 'false',
                 'quit_press_twice': 'true', 'confirm_quit': 'true'}.items())
@@ -202,27 +202,27 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_bound_runtime_fixture(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root)
             self.assertEqual(verify_run(root/'report.json', report, ix, root)['input_origin'], 'synthetic')
 
     def test_missing_eof_rejected(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root, '[Replay] started but unfinished')
             with self.assertRaisesRegex(ReplayError, 'missing_replay_eof'):
                 verify_run(root/'report.json', report, ix, root)
 
     def test_recovery_error_with_success_exit_rejected(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root, '[Replay] EOF\nLoad State Error: Invalid file format')
             with self.assertRaisesRegex(ReplayError, 'runtime_error_log'):
                 verify_run(root/'report.json', report, ix, root)
 
     def test_changed_runtime_binding_rejected(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root)
             (root/'core_options').write_text('changed synthetic option')
             with self.assertRaisesRegex(ReplayError, 'binding_hash'):
@@ -230,7 +230,7 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_borrowed_video_rejected(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root)
             ix['video']['path'] = str(root/'other_video')
             with self.assertRaisesRegex(ReplayError, 'run_video_location'):
@@ -238,7 +238,7 @@ class ReplayCompareTests(unittest.TestCase):
 
     def test_native_commands_cannot_masquerade_as_passive_playback(self):
         with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
+            root = Path(d).resolve()
             report, ix = self.runtime_fixture(root)
             report['native_commands'] = [{'command': 'RECORD_REPLAY'}]
             with self.assertRaisesRegex(ReplayError, 'not_read_only_playback'):

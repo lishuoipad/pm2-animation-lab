@@ -42,6 +42,7 @@ def validate_mode(spec, config):
 
 
 def recording_target(config, content, initial_state, isolated):
+    content, initial_state, isolated = (Path(p).resolve() for p in (content, initial_state, isolated))
     state_dir = Path(config_value(config, 'savestate_directory')).resolve()
     require(state_dir.is_relative_to(isolated), 'state_directory_outside_isolation')
     require(initial_state == state_dir/(content.stem+'.state'), 'entry_state_path')

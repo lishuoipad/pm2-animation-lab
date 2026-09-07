@@ -89,7 +89,7 @@ def append_run(runs, ordinal, digest):
 
 def confined(path, root):
     resolved = Path(path).resolve()
-    if not resolved.is_relative_to(root):
+    if not resolved.is_relative_to(Path(root).resolve()):
         raise VideoIndexError("outside_quarantine")
     return resolved
 
