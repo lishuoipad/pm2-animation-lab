@@ -1,0 +1,797 @@
+{
+  "source_commit": "ec7bdef58357185fe5344973c156b857a5de2c1f",
+  "profiles": {
+    "JOB000": {
+      "source_sha256": "89220eebf1a21a6bb89941be3803bc8751009fb077cbabf6486410c6be1b21ef",
+      "library": "J0.LBX",
+      "patterns": "J001A.PT1",
+      "background": "J001B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 305,
+          "opcode": 3,
+          "name": "J001B"
+        },
+        {
+          "line": 306,
+          "opcode": 6,
+          "name": "J001A"
+        }
+      ]
+    },
+    "JOB001": {
+      "source_sha256": "efa8790af3bc60d4f7a1e05571acf58b9afad0c8a44e909ae1aa69b003f62d25",
+      "library": "J0.LBX",
+      "patterns": "J002A.PT1",
+      "background": "J002B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 359,
+          "opcode": 3,
+          "name": "J002B"
+        },
+        {
+          "line": 360,
+          "opcode": 6,
+          "name": "J002A"
+        }
+      ]
+    },
+    "JOB002": {
+      "source_sha256": "7819518dc9293ef5e0595128e473a255115abfa7aac7d2436ca97757f2ef6f24",
+      "library": "J0.LBX",
+      "patterns": "J003A.PT1",
+      "background": "J003B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 376,
+          "opcode": 3,
+          "name": "J003B"
+        },
+        {
+          "line": 377,
+          "opcode": 6,
+          "name": "J003A"
+        }
+      ]
+    },
+    "JOB003": {
+      "source_sha256": "75682752be653048a693ee261c6a07897b7586a623e21217b23bf1f0b5d6bb34",
+      "library": "J0.LBX",
+      "patterns": "J004A.PT1",
+      "background": "J004B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "capacity": 13,
+      "source_loads": [
+        {
+          "line": 370,
+          "opcode": 3,
+          "name": "J004B"
+        },
+        {
+          "line": 371,
+          "opcode": 6,
+          "name": "J004A"
+        }
+      ]
+    },
+    "JOB004": {
+      "source_sha256": "fdbb78fd42397ea9c457d37c746e5bb1fd8ab602d7da5c4e33632885a56aab56",
+      "library": "J0.LBX",
+      "patterns": "J006A.PT1",
+      "background": "T003B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 388,
+          "opcode": 3,
+          "name": "T003B"
+        },
+        {
+          "line": 389,
+          "opcode": 6,
+          "name": "J006A"
+        }
+      ]
+    },
+    "JOB005": {
+      "source_sha256": "0cb1b129af4763d9dce076056270663e9b21bfe704e85379d7deb89b348bb6b1",
+      "library": "J0.LBX",
+      "patterns": "J005A.PT1",
+      "background": "J005B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 389,
+          "opcode": 3,
+          "name": "J005B"
+        },
+        {
+          "line": 390,
+          "opcode": 6,
+          "name": "J005A"
+        }
+      ]
+    },
+    "JOB006": {
+      "source_sha256": "2293cb49c8b1dadfb399e0a3b5e72fe3b1b2f2369a5266a17dad027603b28716",
+      "library": "J0.LBX",
+      "patterns": "J007A.PT1",
+      "background": "J007B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 335,
+          "opcode": 3,
+          "name": "J007B"
+        },
+        {
+          "line": 336,
+          "opcode": 6,
+          "name": "J007BK"
+        },
+        {
+          "line": 337,
+          "opcode": 6,
+          "name": "J007A"
+        }
+      ],
+      "foreground": {
+        "asset": "J007BK.PT1",
+        "library": "J0.LBX",
+        "pattern_number": 1,
+        "opcode": 17
+      }
+    },
+    "JOB007": {
+      "source_sha256": "aa8b97b2710cc5ca998afd69cea52aacda0c98e3fe402355422963ef3808f4c3",
+      "library": "J0.LBX",
+      "patterns": "J008A.PT1",
+      "background": "J008B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 342,
+          "opcode": 3,
+          "name": "J008B"
+        },
+        {
+          "line": 343,
+          "opcode": 6,
+          "name": "J008A"
+        }
+      ]
+    },
+    "JOB008": {
+      "source_sha256": "57f66cadf5fc7a8deafb23f9a4bba595d89125635f50014577a93bf54aca1934",
+      "library": "J0.LBX",
+      "patterns": "J009A.PT1",
+      "background": "J009B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "capacity": 12,
+      "source_loads": [
+        {
+          "line": 401,
+          "opcode": 3,
+          "name": "J009B"
+        },
+        {
+          "line": 402,
+          "opcode": 6,
+          "name": "J009A"
+        }
+      ]
+    },
+    "JOB009": {
+      "source_sha256": "9d7fb31b88ac300b8c34ee8270cdd1cba3dfc835af736c369b0cbdbcb700be63",
+      "library": "J0.LBX",
+      "patterns": "J010A.PT1",
+      "background": "J010B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "capacity": 13,
+      "source_loads": [
+        {
+          "line": 426,
+          "opcode": 3,
+          "name": "J010B"
+        },
+        {
+          "line": 427,
+          "opcode": 6,
+          "name": "J007BK"
+        },
+        {
+          "line": 428,
+          "opcode": 6,
+          "name": "J010A"
+        }
+      ],
+      "foreground": {
+        "asset": "J007BK.PT1",
+        "library": "J0.LBX",
+        "pattern_number": 1,
+        "opcode": 17
+      }
+    },
+    "JOB010": {
+      "source_sha256": "c0c11f7619f6eb50e3051fac7c72d691ae59a3f9e9b3a019a8da14e04ab91b95",
+      "library": "J0.LBX",
+      "patterns": "J011A.PT1",
+      "background": "J011B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "capacity": 12,
+      "source_loads": [
+        {
+          "line": 442,
+          "opcode": 3,
+          "name": "J011B"
+        },
+        {
+          "line": 443,
+          "opcode": 6,
+          "name": "J011A"
+        }
+      ]
+    },
+    "JOB011": {
+      "source_sha256": "b17fba5954bb14efaacc68e3cf970db6e1fc555e13d4d8817c3347b9f33ee285",
+      "library": "J0.LBX",
+      "patterns": "J012A.PT1",
+      "background": "J012B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 333,
+          "opcode": 3,
+          "name": "J012B"
+        },
+        {
+          "line": 334,
+          "opcode": 6,
+          "name": "J012A"
+        }
+      ]
+    },
+    "JOB012": {
+      "source_sha256": "43c92e8539b908fc4b7707c1d0ae06a779c07211dc36b8f30f87da700af7a214",
+      "library": "J0.LBX",
+      "patterns": "J013A.PT1",
+      "background": "J013B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "capacity": 12,
+      "source_loads": [
+        {
+          "line": 430,
+          "opcode": 3,
+          "name": "J013B"
+        },
+        {
+          "line": 431,
+          "opcode": 6,
+          "name": "J013A"
+        }
+      ]
+    },
+    "JOB013": {
+      "source_sha256": "c700fafee81034667b1e586306f1d520e2135ed8b7133fc8238c73321fabb4a5",
+      "library": "J0.LBX",
+      "patterns": "J014A.PT1",
+      "background": "J014B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "capacity": 14,
+      "source_loads": [
+        {
+          "line": 377,
+          "opcode": 3,
+          "name": "J014B"
+        },
+        {
+          "line": 378,
+          "opcode": 6,
+          "name": "J014A"
+        }
+      ]
+    },
+    "JOB014": {
+      "source_sha256": "e278d984aac9896a0bdf94513fa220d74788f3a7a78b52f660860a6febc6a7ea",
+      "library": "J0.LBX",
+      "patterns": "J015A.PT1",
+      "background": "J015B.PT1",
+      "background_library": "J0.LBX",
+      "active_tracks": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "capacity": 13,
+      "source_loads": [
+        {
+          "line": 422,
+          "opcode": 3,
+          "name": "J015B"
+        },
+        {
+          "line": 423,
+          "opcode": 6,
+          "name": "J015A"
+        }
+      ]
+    },
+    "TRG000": {
+      "source_sha256": "aacfc6fb820725b8c18abdcd965ba8be5d02d41e1f4b5d90c8136d68f3fb0020",
+      "library": "T0.LBX",
+      "patterns": "T001A.PT1",
+      "background": "T001B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 369,
+          "opcode": 3,
+          "name": "T001B"
+        },
+        {
+          "line": 370,
+          "opcode": 6,
+          "name": "T001A"
+        }
+      ]
+    },
+    "TRG001": {
+      "source_sha256": "79338b779dda49679b017a846cff45f6ec78eed1033b59c724e084ce130f5fe3",
+      "library": "T0.LBX",
+      "patterns": "T002A.PT1",
+      "background": "T002B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 393,
+          "opcode": 3,
+          "name": "T002B"
+        },
+        {
+          "line": 394,
+          "opcode": 6,
+          "name": "T002A"
+        }
+      ]
+    },
+    "TRG002": {
+      "source_sha256": "c74a1f3f08042cb98eeff1cde51fa73f15bcdc11972ef1d9b34f41259d913c13",
+      "library": "T0.LBX",
+      "patterns": "T003A.PT1",
+      "background": "T003B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 390,
+          "opcode": 3,
+          "name": "T003B"
+        },
+        {
+          "line": 391,
+          "opcode": 6,
+          "name": "T003A"
+        }
+      ]
+    },
+    "TRG003": {
+      "source_sha256": "6faea4e405a5ab201690fd71ae8faef8f62aacf95931167065cf38e71d24f316",
+      "library": "T0.LBX",
+      "patterns": "T004A.PT1",
+      "background": "T004B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 375,
+          "opcode": 3,
+          "name": "T004B"
+        },
+        {
+          "line": 376,
+          "opcode": 6,
+          "name": "T004A"
+        }
+      ]
+    },
+    "TRG004": {
+      "source_sha256": "f9944d15a3511ececde01e10c8df3cf4c9b7c2b86df96fef12e1cb37f4a00c0f",
+      "library": "T0.LBX",
+      "patterns": "T005A.PT1",
+      "background": "T005B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 402,
+          "opcode": 3,
+          "name": "T005B"
+        },
+        {
+          "line": 403,
+          "opcode": 6,
+          "name": "T005A"
+        }
+      ]
+    },
+    "TRG005": {
+      "source_sha256": "1f9747fe83d52e981294a8ba52e278679494a95e17e6dc79a5045c526064a7be",
+      "library": "T0.LBX",
+      "patterns": "T006A.PT1",
+      "background": "T006B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "capacity": 12,
+      "source_loads": [
+        {
+          "line": 393,
+          "opcode": 3,
+          "name": "T006B"
+        },
+        {
+          "line": 394,
+          "opcode": 6,
+          "name": "T006A"
+        }
+      ]
+    },
+    "TRG006": {
+      "source_sha256": "22fed0e9a46893936fb66fc956a13b7454d795733b8a55f9c1b0c028d933f917",
+      "library": "T0.LBX",
+      "patterns": "T007A.PT1",
+      "background": "T007B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 372,
+          "opcode": 3,
+          "name": "T007B"
+        },
+        {
+          "line": 373,
+          "opcode": 6,
+          "name": "T007A"
+        }
+      ]
+    },
+    "TRG007": {
+      "source_sha256": "ad9d9cd1bc598b3c50a14558e4a7de143f21fdcb267993438db15bfac44176a5",
+      "library": "T0.LBX",
+      "patterns": "T008A.PT1",
+      "background": "T008B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 367,
+          "opcode": 3,
+          "name": "T008B"
+        },
+        {
+          "line": 368,
+          "opcode": 6,
+          "name": "T008A"
+        }
+      ]
+    },
+    "TRG008": {
+      "source_sha256": "cd9b36c30a50a683f81ea1c39a7529b151281003307021f4eedef2aa80ff7070",
+      "library": "T0.LBX",
+      "patterns": "T009A.PT1",
+      "background": "T009B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 365,
+          "opcode": 3,
+          "name": "T009B"
+        },
+        {
+          "line": 366,
+          "opcode": 6,
+          "name": "T009A"
+        }
+      ]
+    },
+    "TRG009": {
+      "source_sha256": "1269c0fcf0700c6512af178123265cbf860af8744500207819e99ae3a7964f70",
+      "library": "T0.LBX",
+      "patterns": "T010A.PT1",
+      "background": "T010B.PT1",
+      "background_library": "T0.LBX",
+      "active_tracks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "capacity": 10,
+      "source_loads": [
+        {
+          "line": 374,
+          "opcode": 3,
+          "name": "T010B"
+        },
+        {
+          "line": 375,
+          "opcode": 6,
+          "name": "T010A"
+        }
+      ]
+    }
+  }
+}

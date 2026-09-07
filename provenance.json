@@ -1,0 +1,225 @@
+{
+  "origin": "https://github.com/lishuoipad/roguelike-rpg",
+  "origin_commit": "036946b7690b724f631273e815c409a28a4cbc50",
+  "origin_directory": "work/reference_analysis/pm2_activities",
+  "export_scope": "self-authored tools, metadata and synthetic tests only",
+  "original_game_files_included": false,
+  "files": [
+    {
+      "upstream_file": "pm2_activity_alignment.py",
+      "upstream_sha256": "c563b90dfea826146e7ec76a3355a6b66c3509c79dc1a3529cd2fd9f12c67627"
+    },
+    {
+      "upstream_file": "pm2_activity_batch_research.py",
+      "upstream_sha256": "5540a187eb33b56195e1acab22c5e1416fb04394c98474e01940417b6d2b6829"
+    },
+    {
+      "upstream_file": "pm2_activity_capture_receipt.py",
+      "upstream_sha256": "2e1ff8448c6b278d098f9f0fb6e1ca271f6abf75ce9be3ad2765ff4cc2f697c7"
+    },
+    {
+      "upstream_file": "pm2_activity_clock.py",
+      "upstream_sha256": "2f44d7d4560b05f025193481d005f657bfee71135c09c53721d9d58e3938afed"
+    },
+    {
+      "upstream_file": "pm2_activity_comparison_gallery.py",
+      "upstream_sha256": "9d194f39e914e26815c184fa5028566e41e7be9a6c562ca54fa582d2fc15314f"
+    },
+    {
+      "upstream_file": "pm2_activity_compositor.py",
+      "upstream_sha256": "abdd8a2e3c9762f73248d015485c6cb59c6904a495307a47882c968cd4f46e5e"
+    },
+    {
+      "upstream_file": "pm2_activity_condition_replay.py",
+      "upstream_sha256": "dc8263d8a890bac92059fa0a198375291bf995ea29c93ff5aa7d27c064adb0aa"
+    },
+    {
+      "upstream_file": "pm2_activity_condition_search.py",
+      "upstream_sha256": "60bf966e97f22912e3eef8f7b8091c86d43bf6d188bacd320129edc1fcf65c48"
+    },
+    {
+      "upstream_file": "pm2_activity_delivery_check.py",
+      "upstream_sha256": "2fb6c0485de76796a77ef8b043049100d3e6e2481648e0b4ec4fe86cb0681034"
+    },
+    {
+      "upstream_file": "pm2_activity_input_census.py",
+      "upstream_sha256": "5dfd8816ff5e37bb0c8e3fbb904598a54b6237bf0fa8e7ca0a1267a6e4208c7e"
+    },
+    {
+      "upstream_file": "pm2_activity_native_diagnostic.py",
+      "upstream_sha256": "0f7a3cc46804f645b15691c5096ba3bd7a34856456622a2a4a4a9371333cba8f"
+    },
+    {
+      "upstream_file": "pm2_activity_observation.py",
+      "upstream_sha256": "96a65c830e2671a683c1bf1acc6010827f0e914ef73263e469ca8adb43790c7c"
+    },
+    {
+      "upstream_file": "pm2_activity_offline_rgb.py",
+      "upstream_sha256": "769ac41048f4152af3db75d4783a218a2871bc2fefa147cc338edc3328d79f77"
+    },
+    {
+      "upstream_file": "pm2_activity_ordered_alignment.py",
+      "upstream_sha256": "d52407d8230b5f22eb85623c12ef80d7caea8bed2a14c22106900b73d1033e76"
+    },
+    {
+      "upstream_file": "pm2_activity_pipeline.py",
+      "upstream_sha256": "4904506354dfd8f57a3f5352630056ac40220bbd07859976787bfd0c8f1f5354"
+    },
+    {
+      "upstream_file": "pm2_activity_playback.py",
+      "upstream_sha256": "81d2d9c7c0a050a7886bddefcd0e5d9529451efc5ee3208de764a458c5df5923"
+    },
+    {
+      "upstream_file": "pm2_activity_refresh.py",
+      "upstream_sha256": "487a1e9d6ae9519b91946f01205f50af8e4e13eb00c65dc909c9ee9baa26bb18"
+    },
+    {
+      "upstream_file": "pm2_activity_replay_audit.py",
+      "upstream_sha256": "6fb12d7c934cdb1bab5f4e1363f27bbb1156ef2d9cfbbf5778bfcef41f5d8fe1"
+    },
+    {
+      "upstream_file": "pm2_activity_replay_compare.py",
+      "upstream_sha256": "ff1001ee3417e5b7c0a34de80d186af0fb3fe5137372db487514dd848b659502"
+    },
+    {
+      "upstream_file": "pm2_activity_replay_probe_run.py",
+      "upstream_sha256": "a0bf144692865baf2fab39e8dc2728b9a95bc566e631c71181ff65eec4f3974a"
+    },
+    {
+      "upstream_file": "pm2_activity_runtime_capture.py",
+      "upstream_sha256": "5d3a38fc0e0071c0ba15577ccbecd994a29f853aa18fe942deff67c119c96ad0"
+    },
+    {
+      "upstream_file": "pm2_activity_scene_profiles.py",
+      "upstream_sha256": "60b21cd874f646c9f502244132c65d1f634f33807b52d29b7faacc5654039443"
+    },
+    {
+      "upstream_file": "pm2_activity_sequence_finish.py",
+      "upstream_sha256": "9b229fa44169f0db07209552fbc66d7de348564a21370212c0231271413ec0a9"
+    },
+    {
+      "upstream_file": "pm2_activity_sequence_video_check.py",
+      "upstream_sha256": "288935093959e4f024300f3eb079fab95ddd534bcd5a9065e16f17196772493e"
+    },
+    {
+      "upstream_file": "pm2_activity_timed_comparison.py",
+      "upstream_sha256": "44ae3bf93de8d588f0f47007d2be242ed4a17dc1ede98813ea2ab212ac716fff"
+    },
+    {
+      "upstream_file": "pm2_activity_timeline.py",
+      "upstream_sha256": "b1ca524c20589f7f81beb12a81a51b460f63d7faba423de5ccc6904eb94d36d4"
+    },
+    {
+      "upstream_file": "pm2_activity_timing.py",
+      "upstream_sha256": "0f9c316e9dd716943db40823ecd975e37183adbb79e66dd66311f78460714b50"
+    },
+    {
+      "upstream_file": "pm2_activity_transition_copy.py",
+      "upstream_sha256": "04167410457ffcdf1676360e7bbc3e6119b89d84a87bd3cf160b9dcb0edc3a18"
+    },
+    {
+      "upstream_file": "pm2_activity_video_index.py",
+      "upstream_sha256": "b41168966b2e5903fdb7bc2566cbd25a1001f23f0ad513bf12acdd5371e5ef5a"
+    },
+    {
+      "upstream_file": "pm2_all_scene_profiles.json",
+      "upstream_sha256": "7545f906a610743a4aaccdaa786b2eb67002c7ee8c6a9822b3d2ab482020ab3e"
+    },
+    {
+      "upstream_file": "pm2_lbx_pt1.py",
+      "upstream_sha256": "bec2cf7eb1fc46ecff9a4c09d9c1df8c96605d8703b2abeffce90d33f4ecdf67"
+    },
+    {
+      "upstream_file": "pm2_pipeline_fault_regression.py",
+      "upstream_sha256": "798f8b286e212c133f0a05662889787792c1e2ae4298239ffd93de59004bf1ea"
+    },
+    {
+      "upstream_file": "test_pm2_activity_alignment.py",
+      "upstream_sha256": "aed52347c2de0101eedf98406875e3dea2229dcc64e9a9fb49ca60dcede6cce3"
+    },
+    {
+      "upstream_file": "test_pm2_activity_capture_receipt.py",
+      "upstream_sha256": "d24ed589a7edb27a12911e0b651981efa09577cce2e31c11e230d8e2acdf3e12"
+    },
+    {
+      "upstream_file": "test_pm2_activity_cli.py",
+      "upstream_sha256": "2c133674b3f7b1ee1569ca927c0e8c73524810c34fceb1f0e9bb59db0e3d64fb"
+    },
+    {
+      "upstream_file": "test_pm2_activity_compositor.py",
+      "upstream_sha256": "d2cc25918f2115b15de18e7ed8d2c893ef5addd4ed150880eb7ac30407ac4669"
+    },
+    {
+      "upstream_file": "test_pm2_activity_condition_search.py",
+      "upstream_sha256": "27f48c7ae47f769385dc2cd48dcc1a58ef3dc3ec4d9f2bab17465ff766fea945"
+    },
+    {
+      "upstream_file": "test_pm2_activity_input_census.py",
+      "upstream_sha256": "ba9840736ef363f3a12ff11de900149ad415b64fd5daa2053f731b856899c4d4"
+    },
+    {
+      "upstream_file": "test_pm2_activity_offline_rgb.py",
+      "upstream_sha256": "346790f632fa6749612b6f858545fe8bb850ef2b6e1a62a57fe5ddd3869ec564"
+    },
+    {
+      "upstream_file": "test_pm2_activity_ordered_alignment.py",
+      "upstream_sha256": "0634c53ca4d9c7f4670d7d184985ef6940e04c41c51210c0d0fe7ff6cf3be2eb"
+    },
+    {
+      "upstream_file": "test_pm2_activity_pipeline.py",
+      "upstream_sha256": "c8a4058608831dad9ad5e8d68401140426b76808128e508ebe0b97aa84e17eaa"
+    },
+    {
+      "upstream_file": "test_pm2_activity_playback.py",
+      "upstream_sha256": "116d71d7b2d268337091677dadc2f7ca08104c458a1071760ae111ac8c570ac0"
+    },
+    {
+      "upstream_file": "test_pm2_activity_replay_audit.py",
+      "upstream_sha256": "ded3d34b9939eaa4008f2060ee8bf7b7488c2d324866c0e4d1c3d4411199bad8"
+    },
+    {
+      "upstream_file": "test_pm2_activity_replay_compare.py",
+      "upstream_sha256": "0691b98919c3d9b787e4b2a9f9d6696e636fe25d44ad30b1f418193f88ad4a1b"
+    },
+    {
+      "upstream_file": "test_pm2_activity_runtime_capture.py",
+      "upstream_sha256": "d39e90c7f48fdab414a3ba1d9dc1ffa710a4f271bb9c20e39833ac1fc9c36573"
+    },
+    {
+      "upstream_file": "test_pm2_activity_sequence_finish.py",
+      "upstream_sha256": "d310bef186c92afc3a8cdef6b475eb25a5c31ab875b4907412215bf2cb5efa28"
+    },
+    {
+      "upstream_file": "test_pm2_activity_sequence_video_check.py",
+      "upstream_sha256": "4ba714918fd2daba5aa59f7b93227c50aa8275754b3a4230039e969d98509c8f"
+    },
+    {
+      "upstream_file": "test_pm2_activity_timed_comparison.py",
+      "upstream_sha256": "df5c4fcf3e4647489613940f12cbcd1495b21c87aa6c535f5e6e415e0bdda7aa"
+    },
+    {
+      "upstream_file": "test_pm2_activity_timeline.py",
+      "upstream_sha256": "fe913170587afd2595488c7dd8509d280f449c73b7d93368589e77bcd842a7ea"
+    },
+    {
+      "upstream_file": "test_pm2_activity_timing.py",
+      "upstream_sha256": "514c9e33a34dbad4e1e400663909ae5bbd6d10858244663e7e8a3980a6b3ece7"
+    },
+    {
+      "upstream_file": "test_pm2_activity_transition_copy.py",
+      "upstream_sha256": "cc4cfb2e32895c5650f4ad049af165c18f6a8059f36e152c806df62096f03b06"
+    },
+    {
+      "upstream_file": "test_pm2_activity_video_index.py",
+      "upstream_sha256": "98bcaf43fbcb0f16da8fc281581d0285ca6341a5a2758edfb4c75399ee4a1f3a"
+    },
+    {
+      "upstream_file": "test_pm2_all_activity_extensions.py",
+      "upstream_sha256": "9bc3da66761873f68cd93c00117f3a9440fbe13ce451c63f0ae2d9bf396a1243"
+    },
+    {
+      "upstream_file": "test_pm2_lbx_pt1.py",
+      "upstream_sha256": "897fd3cb8776429094db67bd5afce6c349b37869e18e0e0d93e2455d18838fef"
+    }
+  ]
+}

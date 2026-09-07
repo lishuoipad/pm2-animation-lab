@@ -1,0 +1,18 @@
+{
+  "schema": "pm2_activity_comparison_request/v1",
+  "scene": "TRG004",
+  "schedule": {
+    "kind": "excerpt",
+    "start_weekday": 1,
+    "days": [{"ordinal": 0, "branch": "success", "expected_state": 0, "random_values": []}],
+    "start_boundary": "first_present",
+    "end_boundary": "after_last_exposure"
+  },
+  "initialization_random_values": [],
+  "entry_state": {"mode": "fresh_init_with_overrides", "provenance": "REPLACE: provenance of your own explicit conditions", "overrides": []},
+  "archive": {"path": "/REPLACE/external-data/inputs/game.zip", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "palette": {"path": "/REPLACE/external-data/palette.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "observation": {"path": "/REPLACE/external-data/observations/ordered.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "encoder": {"path": "/REPLACE/tools/ffmpeg", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "refresh_reconstruction": "capture_conditioned_planar_copy"
+}

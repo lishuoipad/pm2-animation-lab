@@ -1,0 +1,22 @@
+{
+  "schema": "pm2_activity_ordered_observation/v1",
+  "scene": "TRG004",
+  "source_sha256": "REPLACE_WITH_SCENE_PROFILE_SHA256",
+  "selection": {"scene": "TRG004", "first_frame": 0, "end_frame_exclusive": 12, "selection_basis": "REPLACE: exact independently frozen selection"},
+  "frozen_selection": {"path": "/REPLACE/external-data/observations/selection.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "native_index": {"path": "/REPLACE/external-data/observations/index/index.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "capture_spec": {"path": "/REPLACE/external-data/recordings/capture-spec.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "capture_command": {"path": "/REPLACE/external-data/recordings/launch.json", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "recording_config": {"path": "/REPLACE/external-data/record.cfg", "sha256": "REPLACE_WITH_REAL_SHA256"},
+  "start_weekday": 1,
+  "opening_end_frame": 2,
+  "opening_merged_with_first_sunday": false,
+  "opening_note": "STRUCTURAL EXAMPLE ONLY: replace all intervals with measured boundaries; never use these illustrative timings as native evidence",
+  "groups": [
+    {"ticks": [0], "first_frame": 2, "stable_first_frame": 2, "end_frame_exclusive": 4},
+    {"ticks": [1], "first_frame": 4, "stable_first_frame": 4, "end_frame_exclusive": 6},
+    {"ticks": [2], "first_frame": 6, "stable_first_frame": 6, "end_frame_exclusive": 8},
+    {"ticks": [3], "first_frame": 8, "stable_first_frame": 8, "end_frame_exclusive": 10},
+    {"ticks": [4], "first_frame": 10, "stable_first_frame": 10, "end_frame_exclusive": 12}
+  ]
+}

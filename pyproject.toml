@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm2-animation-lab"
+version = "0.1.0"
+description = "Source-driven PM2 activity animation reconstruction and ordered native-frame verification"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+authors = [{name = "lishuoipad"}]
+dependencies = ["Pillow>=10.4,<13", "numpy>=1.26,<3"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Multimedia :: Graphics", "Topic :: Software Development :: Testing"]
+
+[project.optional-dependencies]
+replay = ["zstandard>=0.22,<1"]
+
+[project.scripts]
+pm2-animation-lab = "pm2_animation_lab.cli:main"
+
+[project.urls]
+Repository = "https://github.com/lishuoipad/pm2-animation-lab"
+Issues = "https://github.com/lishuoipad/pm2-animation-lab/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pm2_animation_lab = ["pm2_all_scene_profiles.json"]
